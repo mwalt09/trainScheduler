@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <title>Train Schedule</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="intro deep-orange lighten-2 z-depth-1 center-align">
+      <h1 class="grey-text text-lighten-5">Train Scheduler</h1>
+      <!-- Modal Trigger -->
+      <a class="waves-effect waves-light btn" id="modalBtn" href="#modal1">Add a Train</a>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Add Train Schedule</h4>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="train_name" type="text" class="validate">
+                  <label for="train_name">Train Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="destination" type="text" class="validate">
+                  <label for="destination">Destination</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="first_train" type="text" class="validate">
+                  <label for="first_train">First Train (military time)</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="frequency" type="text" class="validate">
+                  <label for="frequency">Frequency (min)</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn waves-effect waves-light" id="submitButton" type="submit" name="action">Submit
+                  <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+            </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div> -->
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12 m3 l3">
+        <div class="row">
+          <div class="col s12 card-panel teal lighten-2 center-align">
+            <h4>Add Train</h4>
+          </div>
+        </div>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="train_name" type="text" class="validate">
+                <label for="train_name">Train Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="destination" type="text" class="validate">
+                <label for="destination">Destination</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="first_train" type="text" class="validate">
+                <label for="first_train">First Train (military time)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="frequency" type="text" class="validate">
+                <label for="frequency">Frequency (min)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button class="btn waves-effect waves-light" id="submitButton" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <section class="train_schedule">
+        <div class="col s12 m8 l7 offset-l1 offset-m1">
+          <div class="row">
+            <div class="col s12 card-panel teal lighten-2 center-align">
+              <h4>Train Departures</h4>
+            </div>
+          </div>
+          <table class="highlight">
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Link to Moment.js should go here -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+  <!-- train.js -->
+  <script src="assets/javascript/train.js"></script>
+
+</body>
+
+</html>

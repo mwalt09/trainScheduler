@@ -1,0 +1,7 @@
+.intro {
+  background: url("../trainBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 300px;
+}
