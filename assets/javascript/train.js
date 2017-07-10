@@ -17,7 +17,7 @@ var first_train = "";
 var frequency = "";
 
 $("#submitButton").click(function() {
-  event.preventDefault();
+  // event.preventDefault();
 
   var trains = database.ref("/trainSchedule");
   var trainSchedule = trains.push();
@@ -67,4 +67,8 @@ trainSchedule.on("child_added", function(snap) {
 
 $("#modalBtn").click(function() {
   $(".modal").modal("open");
+});
+
+$("#submitButton").click(function() {
+  $(".modal").modal("close");
 });

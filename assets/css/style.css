@@ -4,4 +4,30 @@
   background-repeat: no-repeat;
   background-origin: border-box;
   height: 300px;
+  margin-bottom: 25px;
+}
+
+.intro>h1 {
+  padding-top: 100px;
+  color: #546e7a;
+}
+
+#train_name.validate {
+  margin: 0;
+}
+
+#destination.validate {
+  margin: 0;
+}
+
+#first_train.validate {
+  margin: 0;
+}
+
+#frequency.validate {
+  margin: 0;
+}
+
+.row {
+  margin-bottom: 15px;
 }
